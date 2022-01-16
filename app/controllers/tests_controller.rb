@@ -8,6 +8,7 @@ class TestsController < ApplicationController
 
   # GET /tests/1 or /tests/1.json
   def show
+    Test.find(params[:id])
   end
 
   # GET /tests/new
@@ -66,5 +67,6 @@ class TestsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def test_params
       params.fetch(:test, {})
+      params.require(:test).permit(:title, :content)
     end
 end

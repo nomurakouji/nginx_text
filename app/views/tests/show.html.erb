@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<p>タイトル: <%= @test.title %> </p>
+<p>コンテンツ: <%= @test.content %> </p>
+
 <%= link_to 'Edit', edit_test_path(@test) %> |
 <%= link_to 'Back', tests_path %>
